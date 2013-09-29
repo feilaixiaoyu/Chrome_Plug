@@ -1,0 +1,26 @@
+{
+  "name": "Keep Active in bbs.pediy.com",
+  "version": "0.2",
+  "manifest_version": 2,
+  "description": "Automatically keep a loginned user's status active in the forum bbs.pediy.com.",
+  "icons": {
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  },
+   "background": {
+           "scripts": ["background.js"]
+        },
+  "page_action": {
+    "default_title": "start",
+  	"default_icon": "icon_19.png"
+  },
+    "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+  {
+    "matches": ["http://bbs.pediy.com/"],
+    "js": ["visit.js"]
+  }
+  ]
+}
